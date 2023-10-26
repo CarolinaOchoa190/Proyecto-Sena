@@ -1,0 +1,120 @@
+:root{
+    --verde:#B8E9D4;
+    --verdeosc:#CCCEAB;
+    --azulclaro:#07C8F9;
+    --azul:#0D41E1;
+    --hueso:#f1faee;
+    --fuente:'Quicksand', sans-serif;
+}
+html{
+    box-sizing: border-box;
+}
+*,*::after, *::before{
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuente);
+    background-color:rgb(87, 153, 155);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor{
+    margin: 0 auto;
+    max-width: 800px;
+    width: 95%;
+}
+
+.imagen-formulario{
+    background-image: url("../img/bg.jpg");
+    background-position:center center;
+    background-size:cover;
+    height: 100px;
+    flex:0 0 calc(60%);
+    position: relative;
+    
+}
+
+.imagen-formulario::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(141,169,196,.5),rgba(19,64,116,rgba(141,169,196,.5)));
+    
+}
+
+@media(min-width:500px){
+    .imagen-formulario{
+        height: auto;
+        background-position: right;
+    }
+}
+
+@media(min-width:500px){
+    background-position: center;
+}
+.contenedor-formulario{
+    display: flex;
+}
+
+@media(min-width:500px){
+    .contenedor-formulario{
+        display: flex;
+    }
+}
+.formulario{
+    padding: 20px;
+    background-color: var(--verde);
+}
+
+.texto-formulario h2, .input label, .password-olvidada a{
+    color:black;
+}
+
+.texto-formulario h2{
+    font-size: 35px;
+    text-align: center;
+}
+
+.texto-formulario p{
+    font-size: 18px;
+    text-align: center;
+}
+
+.input label{
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.input input{
+    width: 100%;
+    padding: 2px 7px;
+    border-radius: 0.5px;
+    outline: none;
+}
+
+.password-olvidada a{
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 15px;
+}
+.input input[type="submit"]{
+    background-color:cadetblue;
+    color: var(--hueso);
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    transition: background-color .3s ease-in-out;
+}
+
+.input input[type="submit"]:hover{
+    margin-top: 10px;
+    cursor: pointer;
+    background-color:darkcyan;
+}
